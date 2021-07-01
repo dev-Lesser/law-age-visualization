@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="grey darken-3"
       dark
     >
       
@@ -16,7 +16,7 @@
 
 <script>
 import LawTable from './components/LawTable';
-
+import lawData from '@/assets/data.json'
 export default {
   name: 'App',
 
@@ -27,5 +27,8 @@ export default {
   data: () => ({
     //
   }),
+  created(){
+    this.$store.state.lawData = lawData;
+  }
 };
 </script>
